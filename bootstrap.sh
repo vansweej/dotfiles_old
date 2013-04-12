@@ -3,10 +3,10 @@ cd "$(dirname "${BASH_SOURCE}")"
 git pull
 function doIt() {
 	rsync --exclude ".bashrc" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
-        if [ ! -f ~/.bash_orig ]; then
-          cp ~/.bashrc ~/.bash_orig
-          cat .bashrc >> ~/.bashrc
-        fi
+          if [ ! -f ~/.bash_orig ]; then
+            cp ~/.bashrc ~/.bash_orig
+            cat .bashrc >> ~/.bashrc
+          fi
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
