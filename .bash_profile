@@ -5,8 +5,6 @@
 
 export PATH=$HOME/.rvm/bin:$HOME/bin:$PATH
 
-export SCALATRA_JREBEL="$HOME/jrebel/jrebel.jar"
-
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
@@ -15,7 +13,7 @@ done
 unset file
 
 # init z   https://github.com/rupa/z
-. ~/code/z/z.sh
+#. ~/code/z/z.sh
 
 # init rvm
 source ~/.rvm/scripts/rvm
