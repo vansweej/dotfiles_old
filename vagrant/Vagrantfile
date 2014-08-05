@@ -70,7 +70,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "shell", inline: "git clone https://github.com/vansweej/dotfiles.git"
   config.vm.provision "shell", inline: "dotfiles/install-deps.sh"
-  config.vm.provision "shell", inline: "dotfiles/bootstrap.sh"
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
