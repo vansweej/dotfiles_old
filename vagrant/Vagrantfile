@@ -56,7 +56,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # View the documentation for the provider you're using for more
   # information on available options.
  
-  config.vm.provision "shell", inline: "apt-get -y install xinit" 
+  config.vm.provision "shell", inline: "apt-get -y install xinit"
+  config.vm.provision "shell", inline: "apt-get -y install x11-xserver-utils"
+ 
   config.vm.provision "shell", inline: "apt-get -y install curl"
   config.vm.provision "shell", inline: "apt-get -y install xsel"
   config.vm.provision "shell", inline: "apt-get -y install vim"
