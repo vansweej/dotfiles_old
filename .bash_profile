@@ -12,6 +12,15 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+# enable color support of ls
+if [ -x /usr/bin/dircolors ]; then
+  test -r ~/.dircolors && "$(dircolors -b ~/.dircolors)" || eval "(dircolors -b)"
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
+
 # init z   https://github.com/rupa/z
 #. ~/code/z/z.sh
 
