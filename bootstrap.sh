@@ -2,7 +2,7 @@
 cd "$(dirname "${BASH_SOURCE}")"
 git pull
 function doIt() {
-	rsync -r --exclude ".bashrc" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "install-deps.sh" --exclude "vagrant" -av . ~
+	rsync -r --exclude ".bashrc" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "install-deps.sh" --exclude "vagrant" --exclude ".gitignore" --exclude "readme.md" --exclude "DEPS" -av . ~
           if [ ! -f ~/.bash_orig ]; then
             cp ~/.bashrc ~/.bash_orig
             cat .bashrc >> ~/.bashrc
