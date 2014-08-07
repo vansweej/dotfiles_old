@@ -11,6 +11,13 @@ elif infocmp rxvt-unicode >/dev/null 2>&1; then
         export TERM=rxvt-unicode-256color
 fi
 
+MAGENTA=$(tput setaf 125)
+ORANGE=$(tput setaf 166)
+GREEN=$(tput setaf 64)
+PURPLE=$(tput setaf 61)
+WHITE=$(tput setaf 230)
+
+
 #if tput setaf 1 &> /dev/null; then#
 #	tput sgr0
 #	if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
@@ -49,7 +56,7 @@ function parse_git_branch() {
 
 # Only show username/host if not default
 function usernamehost() {
-	if [ $USER != $default_username ]; then echo "${MAGENTA}$USER ${WHITE}at ${ORANGE}$HOSTNAME $WHITEin "; fi
+	if [ $USER != $default_username ]; then echo "${MAGENTA}$USER${WHITE}@${ORANGE}$HOSTNAME $WHITEin "; fi
 }
 
 # iTerm Tab and Title Customization and prompt customization
