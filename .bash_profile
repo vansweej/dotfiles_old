@@ -16,7 +16,7 @@ unset file
 
 # enable color support of ls
 if [ -x /usr/bin/dircolors ]; then
-  test -r ~/.dircolors && "$(dircolors -b ~/.dircolors)" || eval "(dircolors -b)"
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "(dircolors -b)"
   alias ls='ls --color=auto'
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
