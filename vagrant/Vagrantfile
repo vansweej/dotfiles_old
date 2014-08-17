@@ -69,6 +69,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", inline: "apt-get -y install rxvt-unicode"
 
   config.vm.provision "shell", inline: "git clone https://github.com/vansweej/dotfiles.git"
+  config.vm.provision "shell", inline: "git submodule update --init"
   config.vm.provision "shell", inline: "dotfiles/install-deps.sh"
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
