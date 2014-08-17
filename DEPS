@@ -1,3 +1,4 @@
+rxvt-unicode
 xsel
 curl
 vim
