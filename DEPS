@@ -1,3 +1,4 @@
+openjdk-7-jdk
 rxvt-unicode
 xsel
 curl
