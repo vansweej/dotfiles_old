@@ -55,36 +55,40 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   # View the documentation for the provider you're using for more
   # information on available options.
- 
-  config.vm.provision "shell", inline: "apt-get -y install xinit"
-  config.vm.provision "shell", inline: "apt-get -y install x11-xserver-utils"
- 
-  config.vm.provision "shell", inline: "apt-get -y install curl"
-  config.vm.provision "shell", inline: "apt-get -y install xsel"
-  config.vm.provision "shell", inline: "apt-get -y install vim"
-  config.vm.provision "shell", inline: "apt-get -y install tmux"
-  config.vm.provision "shell", inline: "apt-get -y install fonts-inconsolata"
-  config.vm.provision "shell", inline: "apt-get -y install irssi"
-  config.vm.provision "shell", inline: "apt-get -y install git"
-  config.vm.provision "shell", inline: "apt-get -y install rxvt-unicode"
-
-  config.vm.provision "shell", inline: "git clone https://github.com/vansweej/dotfiles.git"
-  config.vm.provision "shell", inline: "cd dotfiles && git submodule update --init"
-#  config.vm.provision "shell", inline: "dotfiles/install-deps.sh"
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   #
-  # config.vm.provision :chef_solo do |chef|
-  #   chef.cookbooks_path = "../my-recipes/cookbooks"
-  #   chef.roles_path = "../my-recipes/roles"
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = "../chef/cookbooks"
+  #  chef.roles_path = "../my-recipes/roles"
   #   chef.data_bags_path = "../my-recipes/data_bags"
-  #   chef.add_recipe "mysql"
+    chef.add_recipe "apt"
+    chef.add_recipe "vagrant_pre"
+    chef.add_recipe "dotfiles"
+ 
   #   chef.add_role "web"
   #
   #   # You may also specify custom JSON attributes:
   #   chef.json = { :mysql_password => "foo" }
-  # end
+  end
+
+
+  #config.vm.provision "shell", inline: "apt-get -y install xinit"
+  #config.vm.provision "shell", inline: "apt-get -y install x11-xserver-utils"
+
+  #config.vm.provision "shell", inline: "apt-get -y install curl"
+  #config.vm.provision "shell", inline: "apt-get -y install xsel"
+  #config.vm.provision "shell", inline: "apt-get -y install vim"
+  #config.vm.provision "shell", inline: "apt-get -y install tmux"
+  #config.vm.provision "shell", inline: "apt-get -y install fonts-inconsolata"
+  #config.vm.provision "shell", inline: "apt-get -y install irssi"
+  #config.vm.provision "shell", inline: "apt-get -y install git"
+  #config.vm.provision "shell", inline: "apt-get -y install rxvt-unicode"
+
+  config.vm.provision "shell", inline: "git clone https://github.com/vansweej/dotfiles.git"
+  config.vm.provision "shell", inline: "cd dotfiles && git submodule update --init"
+#  config.vm.provision "shell", inline: "dotfiles/install-deps.sh"
 
 end
