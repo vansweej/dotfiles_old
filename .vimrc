@@ -14,7 +14,7 @@ set shiftwidth=2
 set softtabstop=2
 
 " switch linenumbers
-nnoremap <F3> NumbersToggle<CR>
+nnoremap <F3> :NumbersToggle<CR>
 
 " vertical line indentation
 let g:indentLine_char = '┆'
