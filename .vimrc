@@ -13,17 +13,8 @@ set expandtab
 set shiftwidth=2 
 set softtabstop=2
 
-" linenumbers config with toggle
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
-
-set relativenumber
+" switch linenumbers
+nnoremap <F3> NumbersToggle<CR>
 
 " vertical line indentation
 let g:indentLine_char = '┆'

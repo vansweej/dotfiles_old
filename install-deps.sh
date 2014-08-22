@@ -1,3 +1,4 @@
+sudo apt-get -y install build-essential
 sudo apt-get -y install curl
 sudo apt-get -y install xsel
 sudo apt-get -y install vim
