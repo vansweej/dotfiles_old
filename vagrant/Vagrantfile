@@ -58,6 +58,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "shell", inline: "apt-get -y install xinit"
   config.vm.provision "shell", inline: "apt-get -y install x11-xserver-utils"
+  config.vm.provision "shell", inline: "apt-get -y install git"
 
   #config.vm.provision "shell", inline: "apt-get -y install curl"
   #config.vm.provision "shell", inline: "apt-get -y install xsel"
