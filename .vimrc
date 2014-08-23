@@ -2,7 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-let g:solarized_termtrans=1
+let g:solarized_termtrans = 1
 syntax enable
 set background=dark
 colorscheme solarized
@@ -15,6 +15,7 @@ set shiftwidth=2
 set softtabstop=2
 
 " switch linenumbers
+set number
 nnoremap <F3> :NumbersToggle<CR>
 
 " vertical line indentation
