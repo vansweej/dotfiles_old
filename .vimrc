@@ -9,10 +9,10 @@ colorscheme solarized
 
 call togglebg#map("<F5>")
 
-" use 2 spaces for tabs
+" use 4 spaces for tabs
 set expandtab 
-set shiftwidth=2 
-set softtabstop=2
+set shiftwidth=4 
+set softtabstop=4
 
 " switch linenumbers
 set number
