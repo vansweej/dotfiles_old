@@ -3,8 +3,6 @@
 # settings from the github dotfiles repo
 #############################################################################
 
-export PATH=$HOME/.rvm/bin:$HOME/bin:$PATH
-
 xrdb ~/.Xresources
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
@@ -22,12 +20,6 @@ if [ -x /usr/bin/dircolors ]; then
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
 fi
-
-# init z   https://github.com/rupa/z
-#. ~/code/z/z.sh
-
-# init rvm
-#source ~/.rvm/scripts/rvm
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
