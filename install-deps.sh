@@ -10,7 +10,7 @@ sudo apt-get -y install rxvt-unicode
 
 # https://rvm.io
 # rvm for the rubiess
-\curl -sSL https://get.rvm.io | bash -s stable --ruby=1.9.3
+#\curl -sSL https://get.rvm.io | bash -s stable --ruby=1.9.3
 
 # https://github.com/rupa/z
 # z, oh how i love you
