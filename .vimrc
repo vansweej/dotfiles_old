@@ -2,6 +2,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set nocompatible
+set backspace=2
+
 " let g:solarized_termtrans = 1
 syntax enable
 set background=dark
