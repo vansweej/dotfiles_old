@@ -22,9 +22,6 @@
 [submodule ".vim/bundle/numbers.vim"]
 	path = .vim/bundle/numbers.vim
 	url = https://github.com/myusuf3/numbers.vim.git
-[submodule ".vim/bundle/rust"]
-	path = .vim/bundle/rust
-	url = https://github.com/rust-lang/rust.vim.git
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
