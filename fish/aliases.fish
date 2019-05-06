@@ -11,14 +11,14 @@ function grep     ; command grep --color=auto $argv ; end
 
 
 # mv, rm, cp
-alias mv 'command gmv --interactive --verbose'
-alias rm 'command grm --interactive --verbose'
-alias cp 'command gcp --interactive --verbose'
+#alias mv 'command gmv --interactive --verbose'
+#alias rm 'command grm --interactive --verbose'
+#alias cp 'command gcp --interactive --verbose'
 
 
-alias cask='brew cask' # i <3 u cask
+#alias cask='brew cask' # i <3 u cask
 alias where=which # sometimes i forget
-alias brwe=brew  #typos
+#alias brwe=brew  #typos
 
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 
@@ -29,16 +29,17 @@ alias ag='ag -W 200 -f --hidden'
 alias diskspace_report="df -P -kHl"
 alias free_diskspace_report="diskspace_report"
 
+alias develop="git checkout develop"
 alias master="git checkout master"
 
 # Networking. IP address, dig, DNS
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias dig="dig +nocmd any +multiline +noall +answer"
 # wget sucks with certificates. Let's keep it simple.
-alias wget="curl -O"
+#alias wget="curl -O"
 
 # Recursively delete `.DS_Store` files
-alias cleanup_dsstore="find . -name '*.DS_Store' -type f -ls -delete"
+#alias cleanup_dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
 alias g="git"
@@ -51,4 +52,4 @@ alias fs="stat -f \"%z bytes\""
 # emptytrash written as a function
 
 # Update installed Ruby gems, Homebrew, npm, and their installed packages
-alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
+#alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"

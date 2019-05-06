@@ -1,6 +1,6 @@
 set -x GREP_OPTIONS "--exclude-dir=.svn --exclude-dir=.git --binary-files=without-match"
 set -x LESS "-XMcifR"
-set -x TZ "Europe/Amsterdam"
+set -x TZ "Europe/Brussels"
 
 # personal config
 
@@ -24,8 +24,8 @@ function append_if_exists
   end
 end
 
-append_if_exists "$HOME/local/homebrew/bin"
-append_if_exists "$HOME/local/homebrew/sbin"
+#append_if_exists "$HOME/local/homebrew/bin"
+#append_if_exists "$HOME/local/homebrew/sbin"
 append_if_exists "$HOME/local/bin"
 
 append_if_exists /usr/local/sbin

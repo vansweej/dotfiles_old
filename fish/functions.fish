@@ -27,9 +27,9 @@ function sudo!!
 end
 
 # `shellswitch [bash|zsh|fish]`
-function shellswitch
-    chsh -s (brew --prefix)/bin/$argv
-end
+#function shellswitch
+#    chsh -s (brew --prefix)/bin/$argv
+#end
 
 function fuck -d 'Correct your previous console command'
     set -l exit_code $status
